@@ -16,6 +16,10 @@ header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
 }
+#cliffs header {
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+}
 .main-header /* when calling a class, use "." + class name */{
     background-color: rgb(255,255,255,0.8); /* 0.8 is opacity */
     width: 710px;
@@ -261,4 +265,28 @@ input[type="submit"] {
     font-size: large;
     font-weight: bold;
     margin: 20px 0 30px 480px;
+}
+
+/* Images-Cliffs */
+.column {
+    float: left;
+    width: 45%;
+    padding: 0px 15px 15px 15px;
+  }
+  
+  /* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.caption {
+    background-color: #852b1b;
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: larger;
+    font-weight: bold;
+    padding-top: 10px;
 }
