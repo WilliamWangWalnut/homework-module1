@@ -112,7 +112,8 @@
             var min = d.getMinutes(); //Get current minutes
             var sec = d.getSeconds(); //Get current seconds
             var ampm; //Declare empty variable to store AM or PM
-            var zone = new Date().toLocaleTimeString('en-us', {timeZoneName:'short'}).split(' ')[2]; //Get current time zone
+            //Get current zone
+            var zone = new Date().toLocaleTimeString('en-us', {timeZoneName:'short'}).split(' ')[2]; 
             //Add 0 to single digits for seconds
             if (sec < 10) {
                 sec = "0" + sec;
