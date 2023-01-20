@@ -116,16 +116,21 @@
 
             //Get current zone challenge
             var utchr = d.getUTCHours (); //Get current Greenwich Mean Time (GMT)*/
-            var timeDiff = hr - utchr; //To store time difference between GMT hour and Local hour
-            var adjTimeDiff = Math.abs(timeDiff) ; //To store time difference converted to positive number
+            var timeDiff = mhr - utchr; //To store time difference between GMT hour and Local hour
+            //var adjTimeDiff = Math.abs(timeDiff) ; //To store time difference converted to positive number
             var timeZone; //To store the 4 time zones (PT,MT,CT,ET)*/
             var timeZoneDiff = mhr - utchr; //Calculate GMT hour difference
            
             //Allow clock to show +-GMT hours
             if (timeZoneDiff < -12) {
-                timeZoneDiff = "+" + (24 - utchr + mhr)
-            } else {
-                timeZoneDiff = timeZoneDiff
+                timeZoneDiff = "+" + (24 - utchr + mhr);
+            } else if (timeZoneDiff > 12 ) {
+                timeZoneDiff = "-" + (24 - mhr + utchr);
+            } else if (timeZoneDiff > 0) {
+                timeZoneDiff = "+" + timeZoneDiff;
+            } 
+            else {
+                timeZoneDiff = timeZoneDiff;
             }
 
             //Add 0 to single digits for seconds
@@ -147,13 +152,13 @@
             }
             
             //Determin timezone
-            if (adjTimeDiff == 6) {
+            if (timeDiff == -6 || timeDiff == 18) {
                 timeZone = "CT"; timeZoneDiff = "";
-            } else if (adjTimeDiff == 5) {
+            } else if (timeDiff == -5 || timeDiff == 19) {
                 timeZone = "ET"; timeZoneDiff = "";
-            } else if (adjTimeDiff == 7) {
+            } else if (timeDiff == -7 || timeDiff == 17) {
                 timeZone = "MT"; timeZoneDiff = ""
-            } else if (adjTimeDiff == 8) {
+            } else if (timeDiff == -8 || timeDiff == 16) {
                 timeZone = "PT"; timeZoneDiff = ""
             } else {
                 timeZone = "GMT";
