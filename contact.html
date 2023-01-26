@@ -14,12 +14,11 @@
 </head>
 
 <!-- Body -->
-<body id="contact">
+<body id="contact" onload="disableButton(true)">
     <!--Container-->
     <div id = "container">
         <!-- Header -->
         <header>
-            <!-- <img src="images/cliff_ocean.jpg" alt=""Ocean View Cliff" width="1280" height="564"> -->
             <div class="main-header">
                 <div class="logo">
                     <h3>
@@ -97,7 +96,7 @@
 
                     <!--Random Codes-->
                     <div class="randomcode">
-                        <input type="text" name="randomecode" placeholder="Enter characters">
+                        <input type="text" id="codeentered" name="randomecode" placeholder="Enter characters">
                         <p id="codes"></p>
                     </div>
 
