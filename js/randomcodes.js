@@ -27,7 +27,7 @@ document.getElementById("codes").innerHTML = generateCode();
 function disableButton(btnvalue) { //determine when to able or disable button
     document.getElementById("submit").disabled = btnvalue;  //able/disable button
     if (btnvalue == true) {
-        document.getElementById("submit").style.backgroundColor = "rgba(73,119,209,0.3)";
+        document.getElementById("submit").style.backgroundColor = "rgba(73,119,209,0.2)";
         document.getElementById("submit").style.color = "rgba(255,255,255,.5)";
     } else {
         document.getElementById("submit").style.backgroundColor = "rgba(73,119,209,1)";
