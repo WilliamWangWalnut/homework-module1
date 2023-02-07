@@ -198,13 +198,41 @@ td:first-child {
     background-color: #bde1ff;
 }
 
-/* Table */
+/* Table Toggle */
 #events.active {
     background: #9ed034;
     color: #fff;
 }
 #events {
     cursor: pointer;
+}
+#displaySelected {
+    visibility: hidden;
+    margin: 2em auto;
+    width: 800px;
+    height: 200px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+#displaySelected #result, #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+#result {
+    min-height: 50px;
+    width: 400px;
+    padding: 0;
+}
+#result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+#sendinfo input[type="email"] {
+    width: 300px;
+    display: inline-block;
+}
+#sendinfo button {
+    display: inline-block;
 }
 
 /* Contact */
