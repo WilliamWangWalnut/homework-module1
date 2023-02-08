@@ -10,7 +10,7 @@ $(document).ready(function () {
   $("*#events").click(function () {
     var content = $(this).text();
     var index = $(this).index(); //Show Cliff Sites based on User interaction
-    var site = $(".site:nth-child(" + (index + 1) + ")").text();
+    var site = $(".site:eq(" + index + ")").text();
 
     if (content != "Not Available") {
       $(this).toggleClass("tdhighlight");

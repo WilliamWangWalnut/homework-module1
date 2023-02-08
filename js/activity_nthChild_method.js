@@ -9,8 +9,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("*#events").click(function () {
     var content = $(this).text();
-    var index = $(this).index(); //Show Cliff Sites based on User interaction
-    var site = $(".site:nth-child").eq(index).text;
+    var index = $(this).index() + 1; //Show Cliff Sites based on User interaction
+    var site = $(".site:nth-child(" + (index) + ")").text();
 
     if (content != "Not Available") {
       $(this).toggleClass("tdhighlight");
